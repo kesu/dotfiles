@@ -1,0 +1,4 @@
+alias rssit='source ~/code/rssitforme-prod/bin/activate && cd ~/code/rssitforme-prod/src'
+alias psu='ps -u $USER'
+
+
