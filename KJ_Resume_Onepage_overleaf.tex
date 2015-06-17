@@ -1,0 +1,135 @@
+% Use overleaf.com to convert to PDF, pdftex on DO doesn't work very well, spills to next page.
+%\title{My two column CV}
+%
+% tccv (two columns curriculum vitae) is a LaTeX class inspired by
+% the template found at latextemplates.com by Alessandro Plasmati.
+%
+% Create by Nicola Fontana, the original files can be downloaded from:
+% http://dev.entidi.com/p/tccv/
+%
+\documentclass{tccv}
+\usepackage[english]{babel}
+
+%Add extra parameter for one more URL
+\renewcommand\personal[5][]{%
+    \needspace{0.5\textheight}%
+    \newdimen\boxwidth%
+    \boxwidth=\dimexpr\linewidth-2\fboxsep\relax%
+    \colorbox[HTML]{F5DD9D}{%
+    \begin{tabularx}{\boxwidth}{c|X}
+    \Writinghand & {#2}\smallskip\\
+    \Telefon     & {#3}\smallskip\\
+    \Letter      & \href{mailto:#4}{#4}
+    \ifstrempty{#1}{}{\smallskip\\ \Lightning & \href{http://#1}{#1}}
+    \ifstrempty{#5}{}{\smallskip\\ \Lightning & \href{http://#5}{#5}}
+    \end{tabularx}}}
+
+
+\begin{document}
+
+\part{Kesu Jayaprakash}
+
+\section{Work experience}
+
+\begin{eventlist}
+
+\item{October 2013 -- Present}
+     {\textbf{Rogers Communications Inc.}, Brampton,Canada}
+     {Sr. Java Developer (Consultant)}
+
+Providing technical expertise for development, testing \& integration of wireless provisioning systems. Working on IT projects to upgrade legacy provisioning systems to meet market demands of evolving wireless industry. Develop low-latency/high-throughput systems using C++, JEE, Oracle, Web Services. Automatic conversion of manual regression tests to automated test-suites integrated into the build using AOP (\href{https://eclipse.org/aspectj/}{AspectJ} and \href{http://docs.spring.io/spring/docs/current/spring-framework-reference/html/aop.html}{Spring AOP}), JUnit.
+
+\item{July 2005 -- December 2012}
+     {\textbf{Amdocs}, Limassol,Cyprus}
+     {Development Group Leader}
+
+Lead development teams who implemented Amdocs OSS (Operations Support Systems) products for  telecom providers. Designed and developed provisioning applications to meet the low latency/high availability requirements of Tier-1 carriers. Implemented high througput systems that processed millions of requests/hr. Experienced in developing interfaces with mobile network infrastructure elements(HLR, Voicemail, FNR, HSS, PCRF etc.). Received several certificates for innovations \& OSS product knowledge. Automated unit testing by integrating JUnit into in-house testing tools - reduced testing effort. Conducted requirement analysis sessions with clients \& derived system requirements using BPEL/BPMN/TIBCO tools. Worked with business analysts \& provided development estimates. Wrote high level designs/impact assessments \& external interface designs based on vendor specifications. Reviewed detailed designs, conducted code \& test case reviews. 
+
+\item{July 2003 -- July 2005}
+     {\textbf{Cognizant Technology Solutions}, India}
+     {Associate}
+
+Recognized as ``Associate of the Month'' in the Dun \& Bradstreet (D\&B) account for innovations in development and support processes. Worked on projects that productized D\&B's business information database. Provided support for D\&B online systems. Implemented automated regression testing and integrated it into build - reduced the regression defects.
+
+
+\end{eventlist}
+
+\personal
+    [ca.linkedin.com/pub/kesu-jayaprakash/33/703/b7b]
+    {Brampton, ON - L6T 4N6}
+    {+1 (289)-981-2649}
+    {kesu.jp.public@gmail.com}
+
+\section{Education}
+
+\begin{yearlist}
+
+\item[Computer Science]{1999 -- 2003}
+     {Bachelor of Technology}
+     {College of Engineering Thiruvananthapuram, Kerala University}
+\end{yearlist}
+
+\section{Certifications}
+
+\begin{yearlist}
+
+\item{March 2015}
+     {R Programing (\href{https://www.coursera.org/account/accomplishments/certificate/ZNR9NY3SSH}{Verified Certificate})}
+     {By Johns Hopkins University on Coursera}
+
+\item{November 2014}
+     {The Data Scientist's Toolbox (\href{https://www.coursera.org/account/accomplishments/certificate/745X8Z7SQJ}{Verified Certificate})}
+     {By Johns Hopkins University on Coursera}
+
+\end{yearlist}
+
+
+\section{Skill Set}
+{\begin{itemize}
+\item
+    {\textbf{Languages:} C/C++, Java, Python, JavaScript, XML, SQL}
+\item
+    {\textbf{Tools \& Technologies:} JEE, Web Services, SOAP, REST, Hibernate, STL, JUnit, AOP, JQuery, MyBatis, scikit-learn, \LaTeX}
+\item
+    {\textbf{Other interests:} Agile Development, TDD, Functional Programming, C++11, Concurrent programming, Machine Learning, Big data}
+\end{itemize}}
+
+
+
+%\begin{eventlist}
+
+%\begin{factlist}
+
+%\item{Languages}
+%     {C/C++, Java, Python, JavaScript, XML, SQL}
+
+%\item{Tools/Technologies}
+%     {JEE, Web Services, SOAP, REST, Hibernate, STL, JUnit, AOP, JQuery, MyBatis, scikit-learn, \LaTeX}
+
+%\item{Other interests}
+%     {Agile Development, TDD, Functional Programming, C++11, Concurrent programming, Machine Learning, Big data}
+
+%\end{factlist}
+%\end{eventlist}
+
+\section{Projects}
+
+\begin{yearlist}
+
+\item[JEE, SOAP, REST, MyBatis, JavaScript, Rhino]{2012}
+     {Upgrade of Amdocs AAM v7 to v8.2}
+     {XL Axiata, Jakarta}
+
+
+\item[Amdocs AAM v7.5, Java, Web services, Spring, Hibernate, JavaScript]{2011}
+     {WiMAX Provisioning system}
+     {Clearwire, USA}
+
+\item[Amdocs AAM v7.5, Java, Web services, Axis]{2011}
+     {LTE provisioning system}
+     {MetroPCS Communications, USA}
+
+\end{yearlist}
+
+\end{document}
+
