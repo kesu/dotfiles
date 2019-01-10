@@ -26,6 +26,7 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
+# set PATH for go
 if [ -d "/usr/local/go/bin" ]; then
     PATH="$PATH:/usr/local/go/bin"
 fi
